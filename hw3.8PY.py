@@ -11,15 +11,13 @@ for i in lst:
     print(i, end=" ")
 
 #  Задание 2
-n = int(input())
-lst = list(map(int, input().split()))
+n = int(input()) # вводим количество чисел
+lst = list(map(int, input().split())) # вводим числа и создаем список
 
-for i in range(n//2):
-    last = lst.pop()
-    lst.insert(i, last)
+for i in range(n//2): # выполняем цикл для смены мест элементов
+    lst[i], lst[n-i-1] = lst[n-i-1], lst[i] # меняем местами i-ый элемент с (n-i-1)-ым элементом
 
-for i in lst:
-    print(i, end=" ")
+print(*lst) # выводим полученный список
 
 
 #  Задание 3
