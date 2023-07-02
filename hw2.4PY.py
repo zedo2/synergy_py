@@ -22,7 +22,7 @@ ten_thousands = num // 10000 % 10
 result = tens ** ones
 
 # Умножаем результат на количество сотен
-result *= hundreds * 2
+result *= hundreds
 
 # Вычисляем разность между количеством десятков тысяч и количеством тысяч
 diff = ten_thousands - thousands
