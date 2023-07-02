@@ -33,20 +33,22 @@ word = input("Введите слово: ").lower()
 vowels = 0
 consonants = 0
 
+# Словарь для хранения количества каждой гласной буквы
+vowels_dict = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
+
 # Проходимся циклом по всем буквам слова
 for letter in word:
     # Проверяем, является ли буква гласной или согласной
-    if letter in "aeiou":
+    if letter in vowels_dict:
         vowels += 1
+        vowels_dict[letter] += 1
     elif letter.isalpha():
         consonants += 1
 
-# Проверяем, исчерпан ли список гласных букв
-if vowels == 5:
-    print(f"Количество гласных букв: {vowels}, количество согласных букв: {consonants}")
-else:
-    print(False)
-
+# Выводим количество каждой гласной буквы
+print("Количество каждой гласной буквы:")
+for vowel in vowels_dict:
+    print(f"{vowel}: {vowels_dict[vowel]}")
 
 # Задание 3
 minSum = int(input("Введите минимальную сумму инвестиций: "))
