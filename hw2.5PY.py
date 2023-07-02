@@ -55,13 +55,14 @@ minSum = int(input("Введите минимальную сумму инвес�
 mikeSum = int(input("Введите сумму Майка: "))
 ivanSum = int(input("Введите сумму Ивана: "))
 
-if mikeSum + ivanSum >= minSum:
+if mikeSum >= minSum and ivanSum >= minSum:
     print(2)
 elif mikeSum >= minSum:
     print('Mike')
 elif ivanSum >= minSum:
     print('Ivan')
-elif mikeSum + ivanSum >= minSum:
-    print(1)
 else:
-    print(0)
+    if mikeSum + ivanSum >= minSum:
+        print(1)
+    else:
+        print(0)
