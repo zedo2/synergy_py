@@ -54,8 +54,11 @@ class Turtle:
             self.s -= 1
         else:
             raise ValueError("Черепашка не может двигаться дальше.")
-    
+
     def count_moves(self, x2, y2):
+        distance = ((self.x - x2) ** 2 + (self.y - y2) ** 2) ** 0.5
+        if distance > self.s * (10 ** 9): # Максимальное расстояние
+            return None
         steps_x = abs(self.x - x2) // self.s
         steps_x += int((abs(self.x - x2) % self.s) != 0)
         steps_y = abs(self.y - y2) // self.s
