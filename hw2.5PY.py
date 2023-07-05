@@ -45,6 +45,10 @@ for letter in word:
     elif letter.isalpha():
         consonants += 1
 
+# Выводим количество гласных и согласных букв
+print(f"Количество гласных букв: {vowels}")
+print(f"Количество согласных букв: {consonants}")
+
 # Выводим количество каждой гласной буквы
 print("Количество каждой гласной буквы:")
 for vowel in vowels_dict:
